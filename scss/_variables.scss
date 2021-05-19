@@ -1,0 +1,24 @@
+$fa-font-path: '../fonts/font-awesome';
+
+$lead-font-size-md: 1.3rem;
+
+$header-img-xs-width: 575px;
+$header-img-xs-height: 575px;
+
+$header-img-sm-height: 525px;
+$header-img-short-sm-height: 400px;
+
+$colleges-gray: #404040;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

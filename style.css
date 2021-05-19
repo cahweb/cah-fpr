@@ -1,0 +1,70 @@
+/*
+ Theme Name:   Florida Philosophical Review - Child of Colllege
+ Theme URI:    http://dev.cah.ucf.edu
+ Description:  Florida Philosophical Review Theme
+ Author:       Mannong Pang
+ Template:     Colleges-Theme-CAH
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  Florida Philosophical Review Theme
+*/
+@import url("css/style.css");
+
+.serif-div p{
+    font-family: Georgia;
+}
+
+.serif-div ul{
+    font-family:Georgia;
+    padding-inline-start: 15px;
+}
+
+.serif-div ul li{
+    margin-bottom: 1rem;
+}
+
+.home-header-title{
+    content: url("//fpr.cah.ucf.edu/wp-content/uploads/sites/41/2019/05/title-fpr.png");
+    height: auto;
+    
+    max-width: 85%;
+    margin: auto;
+      z-index: 101;
+      position: absolute;
+      /*margin-bottom: 0px;*/
+    }
+    
+    .home .header-content{/*
+        position: absolute;
+        display: inline-block;
+        background-image: url("//dev.cah.ucf.edu/wp-content/uploads/sites/41/2019/05/title-fpr.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center 10px;*/
+      }
+      @media only screen and (max-width: 575px) {
+          .home-header-title{
+              display:none;
+          }
+      }
+    
+.site-main p,.site-main ol,.site-main li,.site-main blockquote{
+    font-family: Georgia;
+}
+
+.article-pdf > a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+ 
+blockquote {
+	background-color:#eceeef;
+	padding: 1.1rem 1.7rem;
+	margin: .8rem 0 2rem 0;
+}     
+/*.site-navbar{
+    background-color: #e3f2fd;
+}*/
+
