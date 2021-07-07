@@ -1,9 +1,31 @@
 <?php
  add_action( 'wp_enqueue_scripts', 'college_theme_child_style' );
 function college_theme_child_style() {
-    wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/static/css/style.min.css' );
-	//Customized Style
-	wp_enqueue_style( 'child-style',  get_stylesheet_directory_uri() . '/style.css');
+    // Cache the parent theme URI and path
+    $uri = get_template_directory_uri();
+    $path = get_template_directory();
+
+    // Enqueue parent style
+    wp_enqueue_style(
+        'parent-style',
+        "$uri/static/css/style.min.css",
+        [],
+        filemtime("$path/static/css/style.min.css"),
+        'all'
+    );
+
+    // Cache the current theme URI and path
+    $uri = get_stylesheet_directory_uri();
+    $path = get_stylesheet_directory();
+
+	// Enqueue child style, making sure parent style is a dependency
+	wp_enqueue_style(
+        'child-style',
+        "$uri/style.css",
+        ['parent-style'],
+        filemtime("$path/style.css"),
+        'all'
+    );
 }
 
 if( !function_exists( 'numberToRomanRepresentation' ) ) {
